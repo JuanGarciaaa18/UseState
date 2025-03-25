@@ -1,0 +1,19 @@
+.LikesDislikes{
+    display: flex;
+    width: 100%;
+    margin-top: 2rem;   
+}
+
+.Number{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 20rem;
+}
+
+.btn{
+    margin-left: 1rem;
+    border-radius: 2rem;
+    width: 8rem;
+    height: 2rem;
+    border: solid 1px rgb(0, 132, 255);
+}
