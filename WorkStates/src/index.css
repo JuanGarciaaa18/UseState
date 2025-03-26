@@ -1,0 +1,59 @@
+
+body {
+    transition: background-color 0.5s ease-in-out;
+    margin: 0;
+    padding: 0;
+}
+
+
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s;
+}
+
+.light-mode {
+    background-color: #ffffff;
+    color: #000;
+}
+
+
+.dark-mode {
+    background-color: #222222;
+    color: #fff;
+}
+
+
+.toggle-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #444;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+    background-color: #666;
+}
+
+
+.color-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.color-button:hover {
+    background-color: #555;
+}

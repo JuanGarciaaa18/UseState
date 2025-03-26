@@ -1,19 +1,14 @@
-import React from 'react';
-import './LikesDislikes.css';
-import { useState } from "react"
-
+import React, { useState } from "react";
+import "./LikesDislikes.css";
 
 export const LikesDislikes = () => {
-  
-  const [Like, setLike] = useState(0)
-  const [DisLike, setDisLike] = useState(0)
+    const [likes, setLikes] = useState(0);
+    const [dislikes, setDislikes] = useState(0);
 
-  return (
-    <div className="LikesDislikes">      
-      <button className="btn" onClick={ ()=> setLike(Like + 1) }>Like</button>
-      <h1 className="Number">{Like}</h1>
-      <button className="btn" onClick={()=> setDisLike(DisLike + 1)}>Dislike</button>
-      <h1 className="Number">{DisLike}</h1>
-    </div>
-  )
-}
+    return (
+        <div className="likes-container">
+            <button className="like-button" onClick={() => setLikes(likes + 1)}>Like {likes}</button>
+            <button className="dislike-button" onClick={() => setDislikes(dislikes + 1)}>Dislike {dislikes}</button>
+        </div>
+    );
+};

@@ -1,32 +1,17 @@
-import React, { useState } from 'react';
-import { LikesDislikes } from '../LikesDislikes/LikesDislikes';
-import './DarkLigthMode.css';
+import React from "react";
+import "./DarkLigthMode.css";
 
-export const DarkLightMode = () => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
-
+export const DarkLightMode = ({ isDarkMode, setIsDarkMode, setBgColor }) => {
     const toggleMode = () => {
-        setIsDarkMode(!isDarkMode);
+        setIsDarkMode(prevMode => !prevMode);
+        setBgColor(prevMode => (prevMode === "#222222" ? "#FFFFFF" : "#222222")); // Cambia el fondo según el modo
     };
 
     return (
-        <div className='page'>
-        <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>
-            <div>
-                <button className="btn-add" onClick={toggleMode}>
-                    {isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-                </button>
-            </div>
-                
-
-           <div>
-            <LikesDislikes />
-           </div>
-
-          
-          
-            
-        </div>
+        <div className="dark-light-container">
+            <button className="toggle-button" onClick={toggleMode}>
+                {isDarkMode ? "Modo Claro" : "Modo Oscuro"}
+            </button>
         </div>
     );
 };
